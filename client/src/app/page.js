@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar";
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between ${styles.wrap}`}
+      className={`flex h-screen flex-col items-center justify-between ${styles.wrap}`}
     >
       <Navbar />
       <div className="flex flex-col items-center justify-center w-full h-full">
