@@ -1,5 +1,3 @@
-export function EditorHeader(){
-    return <>
-    header
-    </>
+export function EditorHeader() {
+  return <>header</>;
 }

@@ -91,28 +91,32 @@ export default function Login() {
   //   };
 
   return (
-    <main className="flex flex-col justify-center items-center h-dvh w-dvw">
-      <h1 className=" text-center mb-4 text-[2rem]">Log In</h1>
-      <div className="w-[500px] shadow-[0px_20px_50px_0px_rgba(0,0,0,0.25)] p-[50px] rounded-[10px] bg-slate-600">
-        <div className="flex flex-row w-full h-10 mb-8 cursor-pointer">
+    <main className="flex flex-col justify-center items-center h-dvh w-dvw bg-[#12151c]">
+      <h1 className=" text-center mb-4 text-[2rem] text-white">Log In</h1>
+      <div className="w-[500px] shadow-[0px_20px_50px_0px_rgba(0,0,0,0.25)] pb-[50px] rounded-[10px] bg-slate-600">
+        <div className="flex flex-row w-full h-14 mb-14 cursor-pointer">
           <div
-            className={`text-center w-2/4 ${
-              candidateStyle ? `bg-neutral-500` : `bg-gray-500`
+            className={`flex justify-center items-center w-2/4 rounded-tl-[10px] ${
+              candidateStyle
+                ? `bg-neutral-500 border-b-2 border-transparent`
+                : `bg-gray-500 border-b-2 border-b-white`
             }`}
             onClick={toggleCandidate(true)}
           >
-            Candidate
+            <span>Candidate</span>
           </div>
           <div
-            className={`flex justify-center item-center w-2/4  ${
-              interviewStyle ? `bg-neutral-500` : `bg-gray-500`
+            className={`flex justify-center items-center w-2/4 rounded-tr-[10px]  ${
+              interviewStyle
+                ? `bg-neutral-500 border-b-2 border-transparent`
+                : `bg-gray-500 border-b-2 border-b-white`
             }`}
             onClick={toggleCandidate(false)}
           >
-            Interviewer
+            <span>Interviewer</span>
           </div>
         </div>
-        <form className="flex flex-col mb-8">
+        <form className="flex flex-col mb-8 px-[50px]">
           <label className="flex flex-col gap-[0.5em] mb-[2em]">
             <div className="text-[0.8em]">EMAIL ADDRESS</div>
             <input
@@ -143,14 +147,14 @@ export default function Login() {
             <Link href="/forgot_password">Forgot password?</Link>
           </div>
           <input
-            className="text-[19px] text-black cursor-pointer mt-2.5 p-2.5 rounded-[5px] border-[none] bg-slate-950"
+            className="text-[19px] text-white cursor-pointer mt-2.5 p-2.5 rounded-[5px] border-[none] bg-slate-950"
             type="submit"
             value="Log In"
           />
         </form>
-        <div className="">
+        <div className="flex flex-row justify-between px-[50px]">
           <div>Don't have an account?</div>
-          <div>
+          <div className="underline">
             <Link href="/signup">Sign up</Link>
           </div>
         </div>
