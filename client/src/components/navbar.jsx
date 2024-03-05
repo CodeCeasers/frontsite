@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
         <Link
           href="/signup"
-          className="bg-slate-500 py-2 px-3 rounded-md outline-none hover:bg-slate-200"
+          className="bg-slate-500 py-2 px-3 rounded-md outline-none hover:bg-slate-400"
         >
           Sign Up
         </Link>
